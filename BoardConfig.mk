@@ -69,3 +69,7 @@ HARDWARE_OMX := true
 BUILD_WITH_TI_AUDIO := 1
 BUILD_PV_VIDEO_ENCODERS := 1
 USE_SHOLES_PROPERTY := true
+
+# Disable JIT and V8. umts_sholes is low on memory
+WITH_JIT := false
+JS_ENGINE := jsc
