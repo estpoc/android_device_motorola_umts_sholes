@@ -84,7 +84,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.max_num_touch=2 \
     ro.com.motorola.smartsensor=true \
     wifi.interface=tiwlan0 \
-    wifi.supplicant_scan_interval=15 \
+    wifi.supplicant_scan_interval=30 \
     dalvik.vm.heapsize=24m \
     dalvik.vm.execution-mode=int:fast
 
