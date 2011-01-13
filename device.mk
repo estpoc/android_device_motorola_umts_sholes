@@ -54,9 +54,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/Usb.apk:/system/app/Usb.apk
 
-# Boot image
+# Images
 PRODUCT_COPY_FILES += \
-    device/motorola/umts_sholes/prebuilt/boot.img:boot.img
+    device/motorola/umts_sholes/prebuilt/boot.img:boot.img \
+    device/motorola/umts_sholes/prebuilt/bpsw.img:bpsw.img \
+    device/motorola/umts_sholes/prebuilt/devtree.img:devtree.img
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
