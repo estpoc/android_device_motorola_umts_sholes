@@ -22,6 +22,7 @@ adb pull /sbin/charge_only_mode ../../../vendor/$MANUFACTURER/$DEVICE/proprietar
 adb pull /system/app/PhoneConfig.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/app/ProgramMenu.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/app/ProgramMenuSystem.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/app/Mynet.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/app/Secclkd.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/akmd2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/ap_gain.bin ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -385,6 +386,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/netmux.ko:/system/lib/modules/netmux.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/netmux_linkdriver.ko:/system/lib/modules/netmux_linkdriver.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/nvm_daemon:/system/bin/nvm_daemon \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/Mynet.apk:/system/app/Mynet.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/opprofdaemon:/system/bin/opprofdaemon \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/output.ko:/system/lib/modules/output.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/panic_daemon:/system/bin/panic_daemon \\

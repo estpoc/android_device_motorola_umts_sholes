@@ -52,7 +52,6 @@ PRODUCT_COPY_FILES += \
 
 # Proprietary device support apks
 PRODUCT_COPY_FILES += \
-    device/motorola/umts_sholes/prebuilt/Mynet.apk:/system/app/Mynet.apk \
     device/motorola/umts_sholes/prebuilt/Usb.apk:/system/app/Usb.apk
 
 # Boot image
