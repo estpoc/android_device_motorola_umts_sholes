@@ -48,7 +48,6 @@ adb pull /system/bin/pvrsrvinit ../../../vendor/$MANUFACTURER/$DEVICE/proprietar
 adb pull /system/bin/rild_tcmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/safe_reboot ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/secclkd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/tcmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/usbd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/watchdogd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/cameraCalFileDef5M.bin ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -117,8 +116,6 @@ adb pull /system/lib/egl/libEGL_POWERVR_SGX530_121.so ../../../vendor/$MANUFACTU
 adb pull /system/lib/egl/libGLESv1_CM_POWERVR_SGX530_121.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv2_POWERVR_SGX530_121.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/hw/gralloc.omap3.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/hw/lights.sholes.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/hw/sensors.sholes.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libaes.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -126,7 +123,6 @@ adb pull /system/lib/libbattd.so ../../../vendor/$MANUFACTURER/$DEVICE/proprieta
 adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libdmengine.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libdmjavaplugin.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libgki.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libglslcompiler.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libgps.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libhostapd_client.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -239,9 +235,7 @@ PRODUCT_COPY_FILES := \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:obj/lib/liboemcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-moto-umts-1.so:obj/lib/libril-moto-umts-1.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lights.sholes.so:obj/lib/hw/lights.sholes.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/sensors.sholes.so:obj/lib/hw/sensors.sholes.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-moto-umts-1.so:obj/lib/libril-moto-umts-1.so
 
 # All the blobs necessary for __DEVICE__
 PRODUCT_COPY_FILES += \\
@@ -325,7 +319,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdmengine.so:/system/lib/libdmengine.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdmjavaplugin.so:/system/lib/libdmjavaplugin.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libEGL_POWERVR_SGX530_121.so:/system/lib/egl/libEGL_POWERVR_SGX530_121.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgki.so:/system/lib/libgki.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLESv1_CM_POWERVR_SGX530_121.so:/system/lib/egl/libGLESv1_CM_POWERVR_SGX530_121.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLESv2_POWERVR_SGX530_121.so:/system/lib/egl/libGLESv2_POWERVR_SGX530_121.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libglslcompiler.so:/system/lib/libglslcompiler.so \\
@@ -363,7 +356,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libtpa.so:/system/lib/libtpa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libWifiAPHardware.so:/system/lib/libWifiAPHardware.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libWifiAPNativeJni.so:/system/lib/libWifiAPNativeJni.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/lights.sholes.so:/system/lib/hw/lights.sholes.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/location.cfg:/system/etc/location.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/location:/system/bin/location \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/logfilter-get:/system/bin/logfilter-get \\
@@ -411,7 +403,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/Secclkd.apk:/system/app/Secclkd.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/secclkd:/system/bin/secclkd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/sec.ko:/system/lib/modules/sec.ko \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/sensors.sholes.so:/system/lib/hw/sensors.sholes.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/sholesp0b-keypad.kcm.bin:/system/usr/keychars/sholesp0b-keypad.kcm.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/sholesp0b-keypad.kl:/system/usr/keylayout/sholesp0b-keypad.kl \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/sholesp1a-keypad.kcm.bin:/system/usr/keychars/sholesp1a-keypad.kcm.bin \\
@@ -424,7 +415,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/sholesp2a-keypad.kl:/system/usr/keylayout/sholesp2a-keypad.kl \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/sholesp2a-keypad-russian.kcm.bin:/system/usr/keychars/sholesp2a-keypad-russian.kcm.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ssmgrd:/system/xbin/ssmgrd \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcmd:/system/bin/tcmd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/tiwlan_ap.ini:/system/etc/wifi/tiwlan_ap.ini \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \\

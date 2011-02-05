@@ -40,7 +40,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8
 TARGET_BOOTLOADER_BOARD_NAME := sholes
 TARGET_PROVIDES_INIT_TARGET_RC := true
 
-BOARD_EGL_CFG := device/motorola/umts_sholes/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/motorola/umts_sholes/egl.cfg
 
 # Max image sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00380000
@@ -67,9 +67,14 @@ WIFI_FIRMWARE_LOADER := "wlan_loader"
 # Codecs for AV
 HARDWARE_OMX := true
 BUILD_WITH_TI_AUDIO := 1
-BUILD_PV_VIDEO_ENCODERS := 1
 USE_SHOLES_PROPERTY := true
 
-# Disable JIT and V8. umts_sholes is low on memory
+# Disable JIT and enable V8. umts_sholes is low on memory
 WITH_JIT := false
-JS_ENGINE := jsc
+JS_ENGINE := v8
+
+# Patches for device
+BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+BOARD_USE_FROYO_LIBCAMERA := true
+BOARD_USE_YUV422I_DEFAULT_COLORFORMAT := true
+BOARD_GPS_LIBRARIES := libgps

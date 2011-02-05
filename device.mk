@@ -43,16 +43,18 @@ DEVICE_PACKAGE_OVERLAYS := device/motorola/umts_sholes/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
-    device/motorola/umts_sholes/prebuilt/vold.fstab:system/etc/vold.fstab \
-    device/motorola/umts_sholes/prebuilt/egl.cfg:system/lib/egl/egl.cfg
+    device/motorola/umts_sholes/vold.fstab:system/etc/vold.fstab \
+    device/motorola/umts_sholes/egl.cfg:system/lib/egl/egl.cfg
 
 # These are the media profiles configuration files
 PRODUCT_COPY_FILES += \
-    device/motorola/umts_sholes/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
+    device/motorola/umts_sholes/media_profiles.xml:system/etc/media_profiles.xml
 
-# Proprietary device support apks
+# Proprietary patched binaries
 PRODUCT_COPY_FILES += \
-    device/motorola/umts_sholes/prebuilt/Usb.apk:/system/app/Usb.apk
+    device/motorola/umts_sholes/prebuilt/Usb.apk:/system/app/Usb.apk \
+    device/motorola/umts_sholes/prebuilt/tcmd:/system/bin/tcmd \
+    device/motorola/umts_sholes/prebuilt/libgki.so:/system/lib/libgki.so
 
 # Images
 PRODUCT_COPY_FILES += \
@@ -69,7 +71,37 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
+    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
+    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Device especific packages
+PRODUCT_PACKAGES += \
+    tiwlan.ini \
+    dspexec \
+    libbridge \
+    overlay.omap3 \
+    wlan_cu \
+    libtiOsLib \
+    wlan_loader \
+    libCustomWifi \
+    wpa_supplicant.conf \
+    dhcpcd.conf \
+    libOMX.TI.AAC.decode \
+    libOMX.TI.AAC.encode \
+    libOMX.TI.AMR.decode \
+    libOMX.TI.AMR.encode \
+    libOMX.TI.MP3.decode \
+    libOMX.TI.WBAMR.decode \
+    libOMX.TI.WBAMR.encode \
+    libOMX.TI.WMA.decode \
+    libOMX.TI.JPEG.Encoder \
+    libLCML \
+    libOMX_Core \
+    libOMX.TI.Video.Decoder \
+    libOMX.TI.Video.encoder \
+    sensors.sholes \
+    lights.sholes \
+    gps.sholes
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -86,11 +118,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.motorola.smartsensor=true \
     wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=45 \
-    dalvik.vm.heapsize=26m \
+    dalvik.vm.heapsize=24m \
     dalvik.vm.execution-mode=int:fast
-
-# we have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Screen density is actually considered a locale (since it is taken into account
 # the the build-time selection of resources). The product definitions including
