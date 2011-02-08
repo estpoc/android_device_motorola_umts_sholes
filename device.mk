@@ -117,7 +117,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.motorola.smartsensor=true \
     wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=45 \
-    dalvik.vm.heapsize=24m \
+    dalvik.vm.heapsize=26m \
     dalvik.vm.execution-mode=int:fast
 
 # we have enough storage space to hold precise GC data
