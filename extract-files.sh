@@ -84,7 +84,6 @@ adb pull /system/etc/motorola/comm_drv/mmins_user_settings.cfg ../../../vendor/$
 adb pull /system/etc/motorola/comm_drv/plmn_text_table.bin ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/motorola/comm_drv/PLMN_VERSION.txt ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/permissions/motorola_platform.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/etc/pvasflocal.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/updatecmds/google_generic_update.txt ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/wifi/fw_tiwlan_ap.bin ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/wifi/fw_wlan1271.bin ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -110,8 +109,6 @@ adb pull /system/lib/dsp/ringio.dll64P ../../../vendor/$MANUFACTURER/$DEVICE/pro
 adb pull /system/lib/dsp/usn.dll64P ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/dsp/wbamrdec_sn.dll64P ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/dsp/wbamrenc_sn.dll64P ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/dsp/wmadec_sn.dll64P ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/dsp/wmv9dec_sn.dll64P ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_POWERVR_SGX530_121.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_POWERVR_SGX530_121.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv2_POWERVR_SGX530_121.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -140,14 +137,7 @@ adb pull /system/lib/libmtp_jni.so ../../../vendor/$MANUFACTURER/$DEVICE/proprie
 adb pull /system/lib/libmtpstack.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libMynetNativeJni.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libomx_wmadec_sharedlibrary.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libomx_wmvdec_sharedlibrary.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libopencore_asflocalreg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libopencore_asflocal.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libpppd_plugin.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libpvasfcommon.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libpvasflocalpbreg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libpvasflocalpb.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libpvr2d.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libpvrANDROID_WSEGL.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libril-moto-umts-1.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -338,14 +328,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmtpstack.so/:/system/lib/libmtpstack.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libMynetNativeJni.so:/system/lib/libMynetNativeJni.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:/system/lib/libomx_wmadec_sharedlibrary.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:/system/lib/libomx_wmvdec_sharedlibrary.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libopencore_asflocalreg.so:/system/lib/libopencore_asflocalreg.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libopencore_asflocal.so:/system/lib/libopencore_asflocal.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpppd_plugin.so:/system/lib/libpppd_plugin.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpvasfcommon.so:/system/lib/libpvasfcommon.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpvasflocalpbreg.so:/system/lib/libpvasflocalpbreg.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpvasflocalpb.so:/system/lib/libpvasflocalpb.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpvr2d.so:/system/lib/libpvr2d.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpvrANDROID_WSEGL.so:/system/lib/libpvrANDROID_WSEGL.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril-moto-umts-1.so:/system/lib/libril-moto-umts-1.so \\
@@ -391,7 +374,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ProgramMenu.apk:/system/app/ProgramMenu.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/protocol_driver:/system/bin/protocol_driver \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvasflocal.cfg:/system/etc/pvasflocal.cfg \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/pvrsrvinit:/system/bin/pvrsrvinit \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/qwerty2.kcm.bin:/system/usr/keychars/qwerty2.kcm.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/qwerty.kcm.bin:/system/usr/keychars/qwerty.kcm.bin \\
@@ -427,8 +409,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/wl1271.bin:/system/etc/firmware/wl1271.bin \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/wl127x_test.ko:/system/lib/modules/wl127x_test.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/wl127x-test.ko:/system/lib/modules/wl127x-test.ko \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wmadec_sn.dll64P:/system/lib/dsp/wmadec_sn.dll64P \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wmv9dec_sn.dll64P:/system/lib/dsp/wmv9dec_sn.dll64P \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 

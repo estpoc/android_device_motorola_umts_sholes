@@ -93,7 +93,6 @@ PRODUCT_PACKAGES += \
     libOMX.TI.MP3.decode \
     libOMX.TI.WBAMR.decode \
     libOMX.TI.WBAMR.encode \
-    libOMX.TI.WMA.decode \
     libOMX.TI.JPEG.Encoder \
     libLCML \
     libOMX_Core \
