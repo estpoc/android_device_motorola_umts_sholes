@@ -117,6 +117,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.motorola.smartsensor=true \
     wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=45 \
+    ro.media.dec.jpeg.memcap=20000000 \
     dalvik.vm.heapsize=26m \
     dalvik.vm.execution-mode=int:fast
 
