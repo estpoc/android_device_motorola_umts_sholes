@@ -96,7 +96,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # the the build-time selection of resources). The product definitions including
 # this file must pay attention to the fact that the first entry in the final
 # PRODUCT_LOCALES expansion must not be a density.
-PRODUCT_LOCALES := hdpi
+PRODUCT_LOCALES += hdpi
 
 # See comment at the top of this file. This is where the other
 # half of the device-specific product definition file takes care
