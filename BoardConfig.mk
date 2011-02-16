@@ -67,7 +67,6 @@ WIFI_FIRMWARE_LOADER := "wlan_loader"
 # Codecs for AV
 HARDWARE_OMX := true
 BUILD_WITH_TI_AUDIO := 1
-USE_SHOLES_PROPERTY := true
 
 # Disable JIT and enable V8. umts_sholes is low on memory
 WITH_JIT := false
